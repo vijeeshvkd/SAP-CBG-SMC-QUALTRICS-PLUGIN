@@ -1,0 +1,14 @@
+{
+    "connections": [],
+    "defaultLanguage": "EN",
+    "id": "APP_1048bcca-9a5f-4117-a1dc-be4039a2f06a",
+    "info": {
+        "organizationName": "SAP",
+        "privacyUrl": "https://www.example.com",
+        "termsUrl": "https://www.example.com"
+    },
+    "metadata": {},
+    "schemaVersion": "0.0.5",
+    "settings": [],
+    "version": "0.0.1"
+}

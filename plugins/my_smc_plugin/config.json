@@ -1,0 +1,15 @@
+{
+  "id": "PLUG_03dac927-5de6-44f0-911a-b778c5e487d6",
+  "type": "actions_task",
+  "version": "0.0.1",
+  "defaultLanguage": "EN",
+  "metadata": {
+    "tags": ["test", "tag", "survey"],
+    "worker": {
+      "type": "runner"
+    }
+  },
+  "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema"
+  }
+}

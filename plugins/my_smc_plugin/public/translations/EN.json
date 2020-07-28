@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "summary": "Extension Plugin Language Strings - EN"
+  },
+  "strings": {
+    "name": {
+      "text": "My SMC Plugin",
+      "context": "Plugin name"
+    },
+    "description": {
+      "text": "My SMC Plugin Description",
+      "context": "Displayed when listing plugin"
+    },
+    "longDescription": {
+      "text": "My SMC Plugin Long Description",
+      "context": "This long textual description is displayed when a user clicks for more details on plugin"
+    },
+    "firstName": {
+      "text": "First Name",
+      "context": "SMC First Name"
+    },
+    "lastName": {
+      "text": "Last Name",
+      "context": "SMC Last Name"
+    },
+    "Email": {
+      "text": "Email",
+      "context": "SMC Email"
+    },
+    "Phone": {
+      "text": "Phone",
+      "context": "SMC Phone"
+    },
+    "actionHeading": {
+      "text": "SMC Test",
+      "context": "Plugin heading"
+    }
+  }
+}
