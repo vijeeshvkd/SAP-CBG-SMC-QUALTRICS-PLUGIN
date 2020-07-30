@@ -9,8 +9,40 @@ export default function CreateResponse(props) {
     const pluginClient = props.pluginClient;
     const [currentFields, setCurrentFields] = useState(props.currentFields);
 
-    function onFieldChange(e) {
-        
+    function onFirstNameChange(value, event) {
+      const newCurrentFields = [...currentFields];
+      newCurrentFields.find(x => x.id === "firstName").value = value;
+      setCurrentFields(newCurrentFields);
+    }
+    function onLastNameChange(value, event) {
+      const newCurrentFields = [...currentFields];
+      newCurrentFields.find(x => x.id === "lastName").value = value;
+      setCurrentFields(newCurrentFields);
+    }
+    function onEmailChange(value, event) {
+      const newCurrentFields = [...currentFields];
+      newCurrentFields.find(x => x.id === "email").value = value;
+      setCurrentFields(newCurrentFields);
+    }
+    function onPhoneChange(value, event) {
+      const newCurrentFields = [...currentFields];
+      newCurrentFields.find(x => x.id === "phone").value = value;
+      setCurrentFields(newCurrentFields);
+    }
+    _isDataValid();
+    function _isDataValid() {
+      let isDataValid = false;
+      isDataValid = _checkRequiredFields(currentFields);
+      pluginClient.postMessage('valid', isDataValid);
+    }
+    function _checkRequiredFields() {
+      const requiredFields = currentFields.filter(fieldOption => {
+        return fieldOption.hasOwnProperty('required') && fieldOption.required === true;
+      });
+
+      return requiredFields.every(requiredField => {
+        return requiredField.value !== "";
+      });
     }
     return (
         // <p>{props.pluginClient.getText('intro')}</p>
@@ -24,9 +56,17 @@ export default function CreateResponse(props) {
                 <div className="required-indicator">
                     <div className="required-indicator-container">*</div>
                 </div>
-                <div className="field-input">
-                    <PipedTextInputSubmenusExample/>
-                </div>
+                <Tooltip
+                    content={<label>{currentFields.find(x => x.id === "firstName").valueTooltip}</label>}
+                    placement="top"
+                    children={<div className="field-input">
+                        <PipedTextInput
+                            onChange={onFirstNameChange}
+                            items={pipedFields}
+                            value={currentFields.find(x => x.id === "firstName").value}
+                            placeholder={currentFields.find(x => x.id === "firstName").valuePlaceholder}
+                        /> </div>}
+                />
             </div>
 
             <div className="field-row">
@@ -36,9 +76,17 @@ export default function CreateResponse(props) {
                 <div className="required-indicator">
                     <div className="required-indicator-container">*</div>
                 </div>
-                <div className="field-input">
-                    <PipedTextInputSubmenusExample/>
-                </div>
+                <Tooltip
+                    content={<label>{currentFields.find(x => x.id === "lastName").valueTooltip}</label>}
+                    placement="top"
+                    children={<div className="field-input">
+                        <PipedTextInput
+                            onChange={onLastNameChange}
+                            items={pipedFields}
+                            value={currentFields.find(x => x.id === "lastName").value}
+                            placeholder={currentFields.find(x => x.id === "lastName").valuePlaceholder}
+                        /> </div>}
+                />
             </div>
 
             <div className="field-row">
@@ -53,7 +101,7 @@ export default function CreateResponse(props) {
                     placement="top"
                     children={<div className="field-input">
                         <PipedTextInput
-                            onChange={onFieldChange}
+                            onChange={onEmailChange}
                             items={pipedFields}
                             value={currentFields.find(x => x.id === "email").value}
                             placeholder={currentFields.find(x => x.id === "email").valuePlaceholder}
@@ -68,18 +116,20 @@ export default function CreateResponse(props) {
                 <div className="required-indicator">
                     <div className="required-indicator-container"></div>
                 </div>
-                <div className="field-input">
-                <input className="Qual-CSS-TextBox"
-                    type="text"
-                    onChange={onFieldChange}
-                    value=""
-                    placeholder={currentFields.find(x=>x.id === 'phone').valuePlaceholder}
-                    name={currentFields.find(x=>x.id === 'phone').name}
+                <Tooltip
+                    content={<label>{currentFields.find(x => x.id === "email").valueTooltip}</label>}
+                    placement="top"
+                    children={<div className="field-input">
+                        <PipedTextInput
+                            onChange={onPhoneChange}
+                            items={pipedFields}
+                            value={currentFields.find(x => x.id === "phone").value}
+                            placeholder={currentFields.find(x => x.id === "phone").valuePlaceholder}
+                        /> </div>}
                 />
-                </div>
             </div>
-            </div>
-        </div>
+          </div>
+      </div>
     );
 }
 function PipedTextInputSubmenusExample() {

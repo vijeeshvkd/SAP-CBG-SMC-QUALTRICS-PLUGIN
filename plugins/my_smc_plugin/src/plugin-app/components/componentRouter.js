@@ -32,6 +32,10 @@ export default function ComponentRouter(props) {
         const credential = _getCredentials();
         const requestBodyParameters = {};
         requestBodyParameters.surveyID = pluginContext.userMeta.surveyId;
+        requestBodyParameters.firstName = (currentFields.find(x => x.id === "firstName").value);
+        requestBodyParameters.lastName = (currentFields.find(x => x.id === "lastName").value);
+        requestBodyParameters.email = (currentFields.find(x => x.id === "email").value);
+        requestBodyParameters.phone = (currentFields.find(x => x.id === "phone").value);
         //requestBodyParameters.responseID = "${e://Field/ResponseID}";
 
         var systemUrl;

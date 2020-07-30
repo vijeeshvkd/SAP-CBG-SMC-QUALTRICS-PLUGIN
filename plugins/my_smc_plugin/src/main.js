@@ -26,5 +26,6 @@ import '@qualtrics/base-styles/dist/base-styles.css';
     };
   
     ReactDOM.render(<Index/>, document.getElementById('app-root'));
+    // client.postMessage('valid', false);
   });
 })();

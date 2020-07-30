@@ -23,17 +23,41 @@
       "text": "Last Name",
       "context": "SMC Last Name"
     },
+    "fld_tooltip_lastName": {
+      "text": "Last Name",
+      "context": "SMC Last Name"
+    },
+    "fld_placeholder_lastName": {
+      "text": "Last Name",
+      "context": "SMC Last Name"
+    },
+    "fld_tooltip_firstName": {
+      "text": "First Name",
+      "context": "SMC Last Name"
+    },
+    "fld_placeholder_firstName": {
+      "text": "First Name",
+      "context": "SMC Last Name"
+    },
     "Email": {
       "text": "Email",
       "context": "SMC Email"
+    },
+    "fld_tooltip_email":{
+      "text": "Email address used to identify existing SAP account and/or existing contact",
+      "context": "Tooltip for the field Email"
+    },
+    "fld_placeholder_email":{
+      "text": "Email",
+      "context": "Placeholder for the field Email"
     },
     "Phone": {
       "text": "Phone",
       "context": "SMC Phone"
     },
     "actionHeading": {
-      "text": "SMC Test",
-      "context": "Plugin heading"
+      "text": "Response Mapping",
+      "context": "Generic Survey Response text"
     }
   }
 }
