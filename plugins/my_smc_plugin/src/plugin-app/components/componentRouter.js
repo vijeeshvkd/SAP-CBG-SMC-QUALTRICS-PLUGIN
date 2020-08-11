@@ -36,7 +36,7 @@ export default function ComponentRouter(props) {
         requestBodyParameters.lastName = (currentFields.find(x => x.id === "lastName").value);
         requestBodyParameters.email = (currentFields.find(x => x.id === "email").value);
         requestBodyParameters.phone = (currentFields.find(x => x.id === "phone").value);
-        //requestBodyParameters.responseID = "${e://Field/ResponseID}";
+        requestBodyParameters.responseID = "${e://Field/ResponseID}";
 
         var systemUrl;
 

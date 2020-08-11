@@ -4,15 +4,15 @@
   },
   "strings": {
     "name": {
-      "text": "SMC_HelloWorld",
+      "text": "SAP Marketing Cloud",
       "context": "The Extension Name"
     },
     "description": {
-      "text": "Extension Description",
+      "text": "Send Qualtrics data to SAP Marketing Cloud",
       "context": "Displayed when listing the extension"
     },
     "longDescription": {
-      "text": "Extension Long Description",
+      "text": "Send Qualtrics data to SAP Marketing Cloud",
       "context": "This long textual description is displayed when a user clicks on an extension"
     }
   }

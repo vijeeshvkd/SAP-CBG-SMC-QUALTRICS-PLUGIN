@@ -4,20 +4,28 @@
   },
   "strings": {
     "name": {
-      "text": "My SMC Plugin",
+      "text": "SAP Marketing Cloud",
       "context": "Plugin name"
     },
     "description": {
-      "text": "My SMC Plugin Description",
+      "text": "SAP Marketing Cloud",
       "context": "Displayed when listing plugin"
     },
     "longDescription": {
-      "text": "My SMC Plugin Long Description",
+      "text": "SAP Marketing Cloud",
       "context": "This long textual description is displayed when a user clicks for more details on plugin"
     },
     "firstName": {
       "text": "First Name",
       "context": "SMC First Name"
+    },
+    "fld_tooltip_firstName": {
+      "text": "First Name",
+      "context": "SMC First Name"
+    },
+    "fld_placeholder_firstName": {
+      "text": "First Name",
+      "context": "SMC Last Name"
     },
     "lastName": {
       "text": "Last Name",
@@ -29,14 +37,6 @@
     },
     "fld_placeholder_lastName": {
       "text": "Last Name",
-      "context": "SMC Last Name"
-    },
-    "fld_tooltip_firstName": {
-      "text": "First Name",
-      "context": "SMC Last Name"
-    },
-    "fld_placeholder_firstName": {
-      "text": "First Name",
       "context": "SMC Last Name"
     },
     "Email": {
@@ -51,12 +51,20 @@
       "text": "Email",
       "context": "Placeholder for the field Email"
     },
+    "fld_name_system_url":{
+      "text": "CPI Tenant URL",
+      "context": "Field Name of SMC System URL"
+    },
+    "fld_tooltip_system_url":{
+        "text": "CPI Target Tenant URL",
+        "context": "Tooltip for the field SMC System URL"
+    },
     "Phone": {
       "text": "Phone",
       "context": "SMC Phone"
     },
     "actionHeading": {
-      "text": "Response Mapping",
+      "text": "Create Response",
       "context": "Generic Survey Response text"
     }
   }

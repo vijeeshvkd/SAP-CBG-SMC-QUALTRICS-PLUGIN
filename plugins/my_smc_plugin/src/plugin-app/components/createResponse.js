@@ -9,6 +9,11 @@ export default function CreateResponse(props) {
     const pluginClient = props.pluginClient;
     const [currentFields, setCurrentFields] = useState(props.currentFields);
 
+    function onCPIURLChange(event) {
+      const newCurrentFields = [...currentFields];
+      newCurrentFields.find(x => x.id === "system_url").value = event.target.value;
+      setCurrentFields(newCurrentFields);
+    }
     function onFirstNameChange(value, event) {
       const newCurrentFields = [...currentFields];
       newCurrentFields.find(x => x.id === "firstName").value = value;
@@ -47,8 +52,31 @@ export default function CreateResponse(props) {
     return (
         // <p>{props.pluginClient.getText('intro')}</p>
         <div>
-            <div className="action-heading">{pluginClient.getText('actionHeading')}</div>
-            <div className="field-rows">
+          <div className="action-heading">{pluginClient.getText('actionHeading')}</div>
+          <div className="field-row-url">
+              <div className="col-1">
+                  <Button className="CustomCSS">{pluginClient.getText('fld_name_system_url')}</Button>
+              </div>
+              <div className="col-2">
+                  *
+              </div>
+              <div className="col-3">
+                  <Tooltip
+                      content={<label>{currentFields.find(x => x.id === "system_url").valueTooltip}</label>}
+                      placement="top"
+                      children={<div className="field-input">
+                          <input className="Qual-CSS-TextBox"
+                              onChange={onCPIURLChange}
+                              type="text"
+                              value={currentFields.find(x => x.id === "system_url").value}
+                              placeholder={currentFields.find(x => x.id === "system_url").valuePlaceholder}
+                              name={currentFields.find(x => x.id === "system_url").name}
+                          />
+                      </div>}
+                  />
+              </div>
+          </div>
+          <div className="field-rows">
             <div className="field-row">
                 <div className="field-selector">
                     <Button className="customcss">{pluginClient.getText('firstName')}</Button>
@@ -117,7 +145,7 @@ export default function CreateResponse(props) {
                     <div className="required-indicator-container"></div>
                 </div>
                 <Tooltip
-                    content={<label>{currentFields.find(x => x.id === "email").valueTooltip}</label>}
+                    content={<label>{currentFields.find(x => x.id === "phone").valueTooltip}</label>}
                     placement="top"
                     children={<div className="field-input">
                         <PipedTextInput
